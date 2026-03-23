@@ -5,3 +5,6 @@ tmp/
 
 # Ignore the Obsidian workspace
 **/.obsidian/workspace.json
+
+# Ignore the installed `node_modules`
+**/node_modules
