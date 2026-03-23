@@ -10,3 +10,21 @@ Here is the [first markdown file containing the generated code](./reframe-bowlin
 
 Additionally, here are the [first generated notes](./reframe-bowling-tutorial-notes.md).
 
+## Second round
+
+### Second prompt
+
+"After a quick review, this looks reasonable; however, it seems that I must type in all the code in one go before I see anything.
+
+Can you change the tutorial to have me check my progress in very small steps so that I can discover errors in very small code chunks since I'm learning re-frame and refreshing HTML and CSS?"
+
+This prompt is moving toward test-driven development but is probably not what I would choose in practice.
+
+### Second response
+
+Here is the [second markdown file containing the generated code](./reframe-bowling-tutorial-v2.md).
+
+Additionally, here are the [second generated notes](./reframe-bowling-tutorial-v2-notes.md).
+
+
+

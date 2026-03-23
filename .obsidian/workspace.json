@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "bowling-cljs-re-frame/reframe-bowling-tutorial-notes.md",
+                "file": "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "reframe-bowling-tutorial-notes"
+              "title": "Bowling with ClojureScript and Re-Frame"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bowling-cljs-re-frame/reframe-bowling-tutorial-notes.md",
+                "file": "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for reframe-bowling-tutorial-notes"
+              "title": "Backlinks for Bowling with ClojureScript and Re-Frame"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "bowling-cljs-re-frame/reframe-bowling-tutorial-notes.md",
+                "file": "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from reframe-bowling-tutorial-notes"
+              "title": "Outgoing links from Bowling with ClojureScript and Re-Frame"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "bowling-cljs-re-frame/reframe-bowling-tutorial-notes.md",
+                "file": "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of reframe-bowling-tutorial-notes"
+              "title": "Outline of Bowling with ClojureScript and Re-Frame"
             }
           }
         ]
@@ -183,10 +183,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "528495b9c19d3961",
+  "active": "21855a05d98f6386",
   "lastOpenFiles": [
-    "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
+    "bowling-cljs-re-frame/reframe-bowling-tutorial-v2-notes.md",
+    "bowling-cljs-re-frame/reframe-bowling-tutorial-v2.md",
     "bowling-cljs-re-frame/reframe-bowling-tutorial-notes.md",
+    "bowling-cljs-re-frame/Bowling with ClojureScript and Re-Frame.md",
     "bowling-cljs-re-frame/reframe-bowling-tutorial.md",
     "Learning AI-assisted Development.md"
   ]
