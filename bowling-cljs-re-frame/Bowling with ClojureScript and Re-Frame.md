@@ -26,5 +26,14 @@ Here is the [second markdown file containing the generated code](./reframe-bowli
 
 Additionally, here are the [second generated notes](./reframe-bowling-tutorial-v2-notes.md).
 
+#### Step-by-step notes
 
+1. Pre-requisites and mental model
+   - Check that `deps-new` is installed
+     - Tried `clj --version` but this only provides the installed version of the CLI tools
+     - Executed `clj -Ttools list`
+       - This command lists all installed tools. This list included `deps-new`
+       
+2. Scaffold the project
+   - Create the project: `clj -Tnew app :name clj-enterprises/bowling-score`
 
