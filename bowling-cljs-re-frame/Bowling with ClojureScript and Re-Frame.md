@@ -57,4 +57,13 @@ After
 
 Then I (finally) saw the page that I expected. Sigh...
 
+Continuing with the AI-generated steps...
+
+4. Add ClojureScript and shadow-cljs
+	- Added `init` and `on-js-reload` to `core.cljs`
+	- Updated `resources/public/index.html` to load the compiled JavaScript at the end of the `body` tag.
+5. Checkpoint 2 - "Hello from ClojureScript" in the browser
+	- The tutorial reports that I should see the code automatically re-loading, but I must refresh my browser after changing the text in `init`.
+	- Additionally, the browser console prints a warning: "shadow-cljs: reloading code but not :after-load hooks are configured". In addition to this message, the link https://shadow-cljs.github.io/docs/UsersGuide.html#_lifecycle_hooks is printed.
+
 
