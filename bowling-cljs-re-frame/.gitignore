@@ -13,6 +13,23 @@ pom.xml.asc
 .nrepl-port
 .cpcache/
 
+.hgignore
+.hg/
+/.prepl-port
+/checkouts
+profiles.clj
+.idea/
+/.lein-*
+.idea/
+*.iml
+.vscode
+.lsp/*
+.clj-kondo/*
+.calva/*
+
+/.shadow-cljs/
+node_modules/
+
 # Ignore ClojureScript generated files
 /out/
 **/resources/public/js/
