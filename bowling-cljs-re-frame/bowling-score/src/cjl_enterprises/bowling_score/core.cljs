@@ -6,6 +6,5 @@
     (set! (.-innerHTML app-el)
           "<h1>🎳 Hello from ClojureScript!</h1>")))
 
-(defn on-js-reload []
-  ;; Called by shadow-cljs after every reload
+(defn ^:dev/after-load start []
   (init))
