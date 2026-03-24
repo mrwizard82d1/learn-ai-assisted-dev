@@ -6,9 +6,9 @@
    :asset-path "/js/compiled"
 
    :modules
-   {:main {:init-fn clj-enterprises.bowling-score/init}}
+   {:main {:init-fn cjl-enterprises.bowling-score.core/init}}
 
    :devtools
    {:http-root "resources/public"
     :http-port 8080
-    :after-load clj-enterprises.bowling-score/on-js-reload}}}}
+    :after-load cjl-enterprises.bowling-score/on-js-reload}}}}

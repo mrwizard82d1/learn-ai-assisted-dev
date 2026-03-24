@@ -1,16 +1,18 @@
 {:paths ["src" "resources"]
+
  :deps {org.clojure/clojure {:mvn/version "1.12.4"}
         org.clojure/clojurescript {:mvn/version "1.12.134"}
-        theller/shadow-cljs {:mvn/version "3.3.6"}
+        thheller/shadow-cljs {:mvn/version "3.3.6"}
         re-frame/re-frame {:mvn/version "1.4.4"}
         reagent/reagent {:mvn/version "2.0.1"}}
+
  :aliases
  {:dev {:extra-paths ["dev"]}
   ;; The following aliases were automatically generated. The tutorial
   ;; **does not** include them, but I do not know what I lose by removing
   ;; them so I simply comment them out.
-  ;; :run-m {:main-opts ["-m" "clj-enterprises.bowling-score"]}
-  ;; :run-x {:ns-default clj-enterprises.bowling-score
+  ;; :run-m {:main-opts ["-m" "cjl-enterprises.bowling-score"]}
+  ;; :run-x {:ns-default cjl-enterprises.bowling-score
   ;;         :exec-fn greet
   ;;         :exec-args {:name "Clojure"}}
   ;; :build {:deps {io.github.clojure/tools.build

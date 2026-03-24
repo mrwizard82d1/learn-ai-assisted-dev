@@ -8,3 +8,9 @@ tmp/
 
 # Ignore the installed `node_modules`
 **/node_modules
+
+# Ignore clj-kondo files
+**/.clj-kondo/
+
+# Ignore Lisp servere files
+**/.lsp/

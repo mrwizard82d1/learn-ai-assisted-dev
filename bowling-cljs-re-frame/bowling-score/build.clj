@@ -2,9 +2,9 @@
   (:refer-clojure :exclude [test])
   (:require [clojure.tools.build.api :as b]))
 
-(def lib 'net.clojars.clj-enterprises/bowling-score)
+(def lib 'net.clojars.cjl-enterprises/bowling-score)
 (def version "0.1.0-SNAPSHOT")
-(def main 'clj-enterprises.bowling-score)
+(def main 'cjl-enterprises.bowling-score)
 (def class-dir "target/classes")
 
 (defn test "Run all the tests." [opts]

@@ -1,10 +1,10 @@
-# clj-enterprises/bowling-score
+# cjl-enterprises/bowling-score
 
 FIXME: my new application.
 
 ## Installation
 
-Download from https://github.com/clj-enterprises/bowling-score
+Download from https://github.com/cjl-enterprises/bowling-score
 
 ## Usage
 
@@ -20,7 +20,7 @@ Run the project, overriding the name to be greeted:
     $ clojure -X:run-x :name '"Someone"'
     Hello, Someone!
 
-Run the project directly, via `:main-opts` (`-m clj-enterprises.bowling-score`):
+Run the project directly, via `:main-opts` (`-m cjl-enterprises.bowling-score`):
 
     $ clojure -M:run-m
     Hello, World!
@@ -48,7 +48,7 @@ from `build.clj`.
 
 Run that uberjar:
 
-    $ java -jar target/net.clojars.clj-enterprises/bowling-score-0.1.0-SNAPSHOT.jar
+    $ java -jar target/net.clojars.cjl-enterprises/bowling-score-0.1.0-SNAPSHOT.jar
 
 ## Options
 

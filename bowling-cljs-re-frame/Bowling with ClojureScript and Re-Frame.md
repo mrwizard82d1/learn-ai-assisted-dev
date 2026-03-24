@@ -36,4 +36,25 @@ Additionally, here are the [second generated notes](./reframe-bowling-tutorial-v
        
 2. Scaffold the project
    - Create the project: `clj -Tnew app :name clj-enterprises/bowling-score`
+   
+3. Checkpoint 1 - Plain HTML loads in the browser
+   - Create the index file (`resources/public/index.html`)
+   - Start the dev server (`npx shawdow-cljs watch app`)
+	   - This command kept failing.
+
+Eventually, I discovered at least two errors. First, the [first set of instructions](./reframe-bowling-tutorial) asked me to create `src/myorg/bowling_score/core.cljs` (notice the suffix). The [second set of instructions](./reframe-bowling-tutorial-v2) **does not** have me create this file. Instead, the [second set of instructions](./reframe-bowling-tutorial-v2) only seems to create `cjl_enterprises/bowling_score/core.clj`. (I also appeared to have made a number of directory errors. These, perhaps additional, errors may have also caused the issue.)
+
+When I
+
+- Renamed `cjl_enterprises/bowling_score/core.clj` to `cjl-enterprises/bowling_score/core.cljs`
+- Corrected all path references to include both `cjl_enterprises` and `bowling_score`.
+  
+After 
+
+- Making these changes 
+- Executing `npx shadow-cljs watch app`
+- Opening `localhost:8080` in my browser
+
+Then I (finally) saw the page that I expected. Sigh...
+
 
