@@ -74,6 +74,8 @@ Continuing with the AI-generated steps...
 			- The browser refreshes "automagically"
 			- And I see the new text from `init`
 	- Additionally, I no longer see the warning about no :after-load hooks
-	- 
-
-
+6. Add Reagent - your first component
+	- I replaced the contents of `core.cljs` with exactly the code in the tutorial. This replacement code included the call to `on-js-reload` which again is producing a warning.
+7. Checkpoint 3 - Reagent renders a heading
+	- Grrr. Ran the web search, "Does clojurescript core code call a function named `on-js-reload`". The AI Overview in Chrome reported: "The `on-js-reload` function is a convention used by development tools, particularly the popular build tool **Figwheel**, to provide a hook for managing application state during hot code reloading." **I am not running Figwheel.** I do not recall seeing any references to Figwheel in any part of this tutorial.
+	- Replacing the call to `on-js-reload` with a call to `start` with the meta-data `^:dev/after-load` repairs this issue.
