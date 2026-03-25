@@ -79,3 +79,7 @@ Continuing with the AI-generated steps...
 7. Checkpoint 3 - Reagent renders a heading
 	- Grrr. Ran the web search, "Does clojurescript core code call a function named `on-js-reload`". The AI Overview in Chrome reported: "The `on-js-reload` function is a convention used by development tools, particularly the popular build tool **Figwheel**, to provide a hook for managing application state during hot code reloading." **I am not running Figwheel.** I do not recall seeing any references to Figwheel in any part of this tutorial.
 	- Replacing the call to `on-js-reload` with a call to `start` with the meta-data `^:dev/after-load` repairs this issue.
+	- Additionally, I also see an error that I've seen before "installHook.js:1 Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot"
+	- To address this issue, I spent way too much time trying to determine the appropriate "incantation" to render a (simple) ClojureScript application handling both
+		- Initial loading (`clj-enterprises.bowling-score.core/init`)
+		- Re-rendering (`clj-enterprises.bowling-score.core/re-render)
