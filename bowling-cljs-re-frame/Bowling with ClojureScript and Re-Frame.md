@@ -90,3 +90,11 @@ Continuing with the AI-generated steps...
 		- Require `[re-frame.core :as rf`
 		- Make `init` synchronously dispatch the `:initialize-db` event
 		- Log a message with the contents of the database when initialized. (I discovered that `init` is only called **once** when the page first loads. I believe that `init` is trigged by the call to `rdc/create-root` but I would not be surprised to be wrong.)
+9. Checkpoint 4 - app-db initializes without errors
+	- Confirmed that I see the correct (one-time) message about `app-db`
+	- Confirmed that I see neither errors nor warnings i the console
+	- Confirmed the value of the key
+		- `rolls`
+		- `game-over?`
+	- Remove the call to `prn` / `js/console.log` in `core/init` (no longer needed)
+		- Famous last words

@@ -34,9 +34,6 @@
   ;; before the first render.
   []
   (rf/dispatch-sync [:initialize-db])
-  ;; Peek at the `app-db` in the console to confirm that the
-  ;; application database was initialized correctly
-  (prn "app-db after init" (clj->js @re-frame.db/app-db))
   (render-app))
 
 (defn ^:dev/after-load re-render
