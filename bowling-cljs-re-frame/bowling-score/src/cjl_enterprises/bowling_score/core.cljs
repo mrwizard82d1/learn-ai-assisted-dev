@@ -15,7 +15,8 @@
 (defn app-view []
   [:div
    [:h1 "🎳 Bowling Scorecard"]
-   [:p "Reagent is again rendering this HTML."]])
+   [:p "Reagent is again rendering this HTML."]
+   [:p {:style {:color "gold"}} "This line demonstrates hot reloading."]])
 
 ;; Define root renderer for React18 using `defonce` so it is only created
 ;; one time
