@@ -83,3 +83,10 @@ Continuing with the AI-generated steps...
 	- To address this issue, I spent way too much time trying to determine the appropriate "incantation" to render a (simple) ClojureScript application handling both
 		- Initial loading (`clj-enterprises.bowling-score.core/init`)
 		- Re-rendering (`clj-enterprises.bowling-score.core/re-render)
+8. Add re-frame - `app-db` and `initialize-db`
+	- Create the initial application database (`default-db`) in `db.cljs`
+	- Create the `:initialize-db` event handler `rf/reg-event-db` in `events.cljs`
+	- Change `core.cljs` to
+		- Require `[re-frame.core :as rf`
+		- Make `init` synchronously dispatch the `:initialize-db` event
+		- Log a message with the contents of the database when initialized. (I discovered that `init` is only called **once** when the page first loads. I believe that `init` is trigged by the call to `rdc/create-root` but I would not be surprised to be wrong.)

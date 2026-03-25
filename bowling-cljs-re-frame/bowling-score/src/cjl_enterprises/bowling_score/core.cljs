@@ -1,7 +1,9 @@
 (ns cjl-enterprises.bowling-score.core
   (:require [goog.dom :as gdom]
             [reagent.core :as r]
-            [reagent.dom.client :as rdc]))
+            [reagent.dom.client :as rdc]
+            [re-frame.core :as rf]
+            [cjl-enterprises.bowling-score.events]))
 
 ;; This implementation is based upon the prompt to Chrome / Gemini:
 ;; "clojurescript create a simple reagent application example.
@@ -15,7 +17,7 @@
 (defn app-view []
   [:div
    [:h1 "🎳 Bowling Scorecard"]
-   [:p "Reagent is again rendering this HTML."]])
+   [:p "`re-frame` initialized - check the browser console."]])
 
 ;; Define root renderer for React18 using `defonce` so it is only created
 ;; one time
@@ -27,7 +29,14 @@
 
 (defn init
   "The entry point for the application. Called once on initial load"
+  ;; `dispatch-sync`: runs the handler immediately (synchronously).
+  ;; Use this function at start-up so that the database is available
+  ;; before the first render.
   []
+  (rf/dispatch-sync [:initialize-db])
+  ;; Peek at the `app-db` in the console to confirm that the
+  ;; application database was initialized correctly
+  (prn "app-db after init" (clj->js @re-frame.db/app-db))
   (render-app))
 
 (defn ^:dev/after-load re-render
