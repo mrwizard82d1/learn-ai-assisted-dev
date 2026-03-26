@@ -113,3 +113,9 @@ Continuing with the AI-generated steps...
 	- Create the file `cjl-enterprises/bowling-score/subs.cljs`
 	- Register two subscriptions: `:rolls` and `:game-over?`
 	- **Subscribe** to the `:rolls` database item and use it to print out an up-to-date "debugging" message
+13. Checkpoint 6 - rolls list appears in the UI
+	- The re-frame loop is now complete for the first time:
+		- Dispatch event `[:roll-ball n`
+		- `:roll-ball` handler updates `:rolls` in `app-db`
+		- `:rolls` subscription recalculates
+		- Application view re-renders with new rolls list
