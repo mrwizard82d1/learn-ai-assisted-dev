@@ -101,4 +101,11 @@ Continuing with the AI-generated steps...
 10. Your first event handler - `:roll-ball` (stub)
 	- Add a `:roll-ball` event.
 	- The handler for the `:roll-ball` event simply (for now) appends the number of pins knocked down for this roll to the `:roll` item in the application database.
-	- 
+11. Checkpoint 5 - clicking a button updates the db
+	- We inspect the database after clicking a button by executing the function
+		```clojure
+		cljs.core.clj__GT_js(re-frame.db.app_db.state)
+		```
+		I understand that an arguably better / easier way to accomplish this task is to use the package, `re-frame-10x`.
+		
+		 In addition, this checkpoint demonstrates the time-honored technique of "`println` debugging" by adding a new HTML paragraph printing out the contents of the `app-db` atom.

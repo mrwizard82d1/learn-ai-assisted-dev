@@ -18,17 +18,27 @@
   [:div
    [:h1 "🎳 Bowling Scorecard"]
    [:p "Click a button to roll the ball"]
+   ;; One can invoke the function
+   ;; ```clojure
+   ;; cljs.core.clj__GT_js(re_frame.db.app_db.state)
+   ;; ```
+   ;; in the JavaScript debug console or one can add the following
+   ;; debug output line.
+   ;;
+   ;; Note that directly dereferencing the `app-db` atom is fine for
+   ;; debugging, it is **not** how to read state in a production
+   ;; environment. In a production environment, use a subscription
+   ;; but we've not (yet) learned about subscriptions (upcoming
+   ;; attractions).
+   [:p (str "Raw db rolls: " (pr-str (:rolls @re-frame.db/app-db)))]
    ;; Render one button for each possible pin count (0 - 10)
    (for [n (range 11)]
      [:button
       {;; React requires a unique `:key` in lists
        :key n
-       ;; Dispatch the `:roll-ball` event (with the number of pins
+       ;; Dispatch the `:roll-ball` event [with the number of pins
        ;; knocked down)
-       ;; :on-click #(rf/dispatch [:roll-ball n])
-       :on-click (fn [_e]
-                   (println "Knocked down" n "pins")
-                   (rf/dispatch [:roll-ball n]))
+       :on-click #(rf/dispatch [:roll-ball n])
        :style {:margin "4px"
                :padding "6px 12px" ;; top-bottom and left-right?
                :cursor "pointer"}}
