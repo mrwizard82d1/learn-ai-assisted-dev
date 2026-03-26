@@ -98,3 +98,7 @@ Continuing with the AI-generated steps...
 		- `game-over?`
 	- Remove the call to `prn` / `js/console.log` in `core/init` (no longer needed)
 		- Famous last words
+10. Your first event handler - `:roll-ball` (stub)
+	- Add a `:roll-ball` event.
+	- The handler for the `:roll-ball` event simply (for now) appends the number of pins knocked down for this roll to the `:roll` item in the application database.
+	- 

@@ -8,3 +8,11 @@
  :initialize-db
  (fn [_db _event]
    db/default-db))
+
+;; [:roll-bal n] - record that the player knocked down n pins.
+;; No bowling logic yet; we simply append the number of pins knocked
+;; down to the `:rolls` vector in the application database.
+(rf/reg-event-db
+ :roll-ball
+ (fn [db [_event_id pins]]
+   (update db :rolls conj pins)))

@@ -17,7 +17,22 @@
 (defn app-view []
   [:div
    [:h1 "🎳 Bowling Scorecard"]
-   [:p "`re-frame` initialized - check the browser console."]])
+   [:p "Click a button to roll the ball"]
+   ;; Render one button for each possible pin count (0 - 10)
+   (for [n (range 11)]
+     [:button
+      {;; React requires a unique `:key` in lists
+       :key n
+       ;; Dispatch the `:roll-ball` event (with the number of pins
+       ;; knocked down)
+       ;; :on-click #(rf/dispatch [:roll-ball n])
+       :on-click (fn [_e]
+                   (println "Knocked down" n "pins")
+                   (rf/dispatch [:roll-ball n]))
+       :style {:margin "4px"
+               :padding "6px 12px" ;; top-bottom and left-right?
+               :cursor "pointer"}}
+       n])])
 
 ;; Define root renderer for React18 using `defonce` so it is only created
 ;; one time
