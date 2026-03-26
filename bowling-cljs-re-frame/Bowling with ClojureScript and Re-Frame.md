@@ -109,3 +109,7 @@ Continuing with the AI-generated steps...
 		I understand that an arguably better / easier way to accomplish this task is to use the package, `re-frame-10x`.
 		
 		 In addition, this checkpoint demonstrates the time-honored technique of "`println` debugging" by adding a new HTML paragraph printing out the contents of the `app-db` atom.
+ 12. Your first subscription - `:rolls`
+	- Create the file `cjl-enterprises/bowling-score/subs.cljs`
+	- Register two subscriptions: `:rolls` and `:game-over?`
+	- **Subscribe** to the `:rolls` database item and use it to print out an up-to-date "debugging" message

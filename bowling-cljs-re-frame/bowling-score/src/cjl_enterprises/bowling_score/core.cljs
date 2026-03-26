@@ -3,7 +3,8 @@
             [reagent.core :as r]
             [reagent.dom.client :as rdc]
             [re-frame.core :as rf]
-            [cjl-enterprises.bowling-score.events]))
+            [cjl-enterprises.bowling-score.events]
+            [cjl-enterprises.bowling-score.subs]))
 
 ;; This implementation is based upon the prompt to Chrome / Gemini:
 ;; "clojurescript create a simple reagent application example.
@@ -15,34 +16,38 @@
 
 ;; A Reagent component is just a function that return hiccup.
 (defn app-view []
-  [:div
-   [:h1 "🎳 Bowling Scorecard"]
-   [:p "Click a button to roll the ball"]
-   ;; One can invoke the function
-   ;; ```clojure
-   ;; cljs.core.clj__GT_js(re_frame.db.app_db.state)
-   ;; ```
-   ;; in the JavaScript debug console or one can add the following
-   ;; debug output line.
-   ;;
-   ;; Note that directly dereferencing the `app-db` atom is fine for
-   ;; debugging, it is **not** how to read state in a production
-   ;; environment. In a production environment, use a subscription
-   ;; but we've not (yet) learned about subscriptions (upcoming
-   ;; attractions).
-   [:p (str "Raw db rolls: " (pr-str (:rolls @re-frame.db/app-db)))]
-   ;; Render one button for each possible pin count (0 - 10)
-   (for [n (range 11)]
-     [:button
-      {;; React requires a unique `:key` in lists
-       :key n
-       ;; Dispatch the `:roll-ball` event [with the number of pins
-       ;; knocked down)
-       :on-click #(rf/dispatch [:roll-ball n])
-       :style {:margin "4px"
-               :padding "6px 12px" ;; top-bottom and left-right?
-               :cursor "pointer"}}
-       n])])
+  ;; `@(rf/subscripb [...])` returns the current value.
+  ;; Reagent tracks this dereference and re-renders when the value
+  ;; changes.
+  (let [rolls @(rf/subscribe [:rolls])]
+    [:div
+     [:h1 "🎳 Bowling Scorecard"]
+     [:p "Click a button to roll the ball"]
+     ;; one can invoke the function
+     ;; ```clojure
+     ;; cljs.core.clj__gt_js(re_frame.db.app_db.state)
+     ;; ```
+     ;; in the javascript debug console or one can add the following
+     ;; debug output line.
+     ;;
+     ;; note that directly dereferencing the `app-db` atom is fine for
+     ;; debugging, it is **not** how to read state in a production
+     ;; environment. in a production environment, use a subscription
+     ;; but we've not (yet) learned about subscriptions (upcoming
+     ;; attractions).
+     [:p (str "Rolls so far: " (pr-str rolls))]
+     ;; render one button for each possible pin count (0 - 10)
+     (for [n (range 11)]
+       [:button
+        {;; react requires a unique `:key` in lists
+         :key n
+         ;; dispatch the `:roll-ball` event [with the number of pins
+         ;; knocked down)
+         :on-click #(rf/dispatch [:roll-ball n])
+         :style {:margin "4px"
+                 :padding "6px 12px" ;; top-bottom and left-right?
+                 :cursor "pointer"}}
+        n])]))
 
 ;; Define root renderer for React18 using `defonce` so it is only created
 ;; one time
