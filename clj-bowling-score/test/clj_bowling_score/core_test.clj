@@ -40,4 +40,11 @@
   (testing "scores 10 for a spare (no bonus applied here)"
     (is (= 10 (score-frame {:rolls [7 3]})))))
 
+;; --- spare? ---
+
+(deftest spare-returns-true-for-spare
+  (testing "returns true when two rolls sum to 10"
+    (is (true? (spare? {:rolls [7 3]})))))
+
+
 (run-tests)

@@ -11,6 +11,5 @@
   (let [rolls (:rolls frame)]
     (apply + rolls)))
 
-(score-frame (get-frame frames 0))
-(score-frame (get-frame frames 1))
-(score-frame (get-frame frames 2))
+(defn spare? [frame]
+  false)
